@@ -34,7 +34,37 @@ export default class App {
 
     }
 
-    // Función que
+    // Función que calcule el costo de una venta de boletos
+
+    costoBoletos(numeroAsiento, dia){
+
+        let costoAsiento;
+
+        if(numeroAsiento >= 1 && numeroAsiento <= 10){
+            costoAsiento = 50;
+        }else if(numeroAsiento >= 11 && numeroAsiento <= 20){
+            costoAsiento = 60;
+        }else if(numeroAsiento >= 21 && numeroAsiento <= 30){
+            costoAsiento = 70;
+        }else{
+            costoAsiento = 80;
+        }
+
+        if(dia == 1){
+            costoAsiento = costoAsiento * 0.9;
+        }else if(dia == 3){
+            costoAsiento = costoAsiento * 0.9;
+        }else if(dia >= 8){
+            return -1;
+        }else if(dia <= 0){
+            return -1;
+        }else{
+            return costoAsiento;
+        }
+
+        return costoAsiento;
+
+    }
 
 }
 
@@ -50,3 +80,13 @@ console.log(app.totalVenta(10, 5));
 console.log(app.totalVenta(10, 10));
 console.log(app.totalVenta(10, 20));
 console.log(app.totalVenta(10, 30));
+
+//Función 3
+console.log(app.costoBoletos(5, 2));
+console.log(app.costoBoletos(15, 2));
+console.log(app.costoBoletos(25, 2));
+console.log(app.costoBoletos(35, 2));
+console.log(app.costoBoletos(5, 1));
+console.log(app.costoBoletos(5, 3));
+console.log(app.costoBoletos(5, 0));
+console.log(app.costoBoletos(5, 12));
