@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Retirar",
+      "setup": "npm install",
+      "run": "npm run test retirar.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Total venta",
+      "setup": "",
+      "run": "npm run test totalVenta.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Costo boletos",
+      "setup": "",
+      "run": "npm run test costoBoletos.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 4
+    }
+  ]
+}
